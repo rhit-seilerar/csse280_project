@@ -26,33 +26,70 @@
       </nav>
       
       <div id="displayPage">
-         <h2>Schedule 0 out of 0</h2>
-         <!-- <i class="material-icons">star</i> -->
+         <div id="displayHeader">
+            <h2>Schedule 0 out of 0</h2>
+            <i class="material-icons">star</i>
+         </div>
+         
+         <div id="displayMain">
+            <div id="displayTable"></div>
+            <div id="displayArrows"></div>
+         </div>
+         
+         <div id="displayFooter">
+            <span id="displayKeyLabel">Key:</span>
+            
+            <div id="displayKeyEntryList">
+               <div class="displayKeyEntry">
+                  <div class="displayKeyColor"></div>
+                  <span>CSSE 280</span>
+               </div>
+               <div class="displayKeyEntry">
+                  <div class="displayKeyColor"></div>
+                  <span>MA 113</span>
+               </div>
+               <div class="displayKeyEntry">
+                  <div class="displayKeyColor"></div>
+                  <span>CSSE 230</span>
+               </div>
+               <div class="displayKeyEntry">
+                  <div class="displayKeyColor"></div>
+                  <span>CSSE 290</span>
+               </div>
+            </div>
+         </div>
       </div>
       
       <div id="filterPage">
-         <div class="filterSection">
-            <h1>Filters</h1>
+         <div id="filterList">
+            <div class="filterSection">
+               <h1>Filters</h1>
+            </div>
+            <div class="filterSection">
+               <h2>Change Courses</h2>
+               <i class="material-icons filter-arrow">arrow_drop_down</i>
+            </div>
+            <div class="filterSection">
+               <h2>Select Professors</h2>
+               <i class="material-icons filter-arrow">arrow_drop_down</i>
+            </div>
+            <div class="filterSection">
+               <h2>Change Course Colors</h2>
+               <i class="material-icons filter-arrow">arrow_drop_down</i>
+            </div>
+            <div class="filterSection">
+               <h2>Select Sections</h2>
+               <i class="material-icons filter-arrow">arrow_drop_down</i>
+            </div>
+            <div class="filterSection">
+               <h2>Select Times</h2>
+               <i class="material-icons filter-arrow">arrow_drop_down</i>
+            </div>
          </div>
-         <div class="filterSection">
-            <h2>Change Courses</h2>
-            <i class="material-icons filter-arrow">arrow_drop_down</i>
-         </div>
-         <div class="filterSection">
-            <h2>Select Professors</h2>
-            <i class="material-icons filter-arrow">arrow_drop_down</i>
-         </div>
-         <div class="filterSection">
-            <h2>Change Course Colors</h2>
-            <i class="material-icons filter-arrow">arrow_drop_down</i>
-         </div>
-         <div class="filterSection">
-            <h2>Select Sections</h2>
-            <i class="material-icons filter-arrow">arrow_drop_down</i>
-         </div>
-         <div class="filterSection">
-            <h2>Select Times</h2>
-            <i class="material-icons filter-arrow">arrow_drop_down</i>
+         
+         <div id="filterFooter">
+            <button id="resetChangesButton" class="filter-button" type="button">Reset Changes</button>
+            <button id="saveChangesButton"  class="filter-button" type="button">Save  Changes</button>
          </div>
       </div>
       
