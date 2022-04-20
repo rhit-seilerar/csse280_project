@@ -24,6 +24,7 @@ nav {
    justify-content: space-between;
    display: flex;
    top: 0;
+   z-index: 500;
 }
 
 #menu {
@@ -64,7 +65,7 @@ nav {
    display: flex;
    flex-flow: column;
    justify-content: space-between;
-   margin-left: 2.5%;
+   margin-left: 4%;
    margin-right: 8%;
 }
 
@@ -78,19 +79,75 @@ nav {
    font-size: 3em;
    color: black;
    position: relative;
-   top: 10px;
+   top: 9px;
+}
+
+#displayMain {
+   height: 100%;
+}
+
+#displayTable {
+   min-height: 80%;
+   display: grid;
+   grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+   grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr;
+   border: 1px solid black;
+   text-align: center;
+}
+
+#displayTable>div {
+   border: 1px solid black;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.table-header {
+   font-weight: bold;
+}
+
+#displayArrows {
+   display: flex;
+   justify-content: space-between;
+   margin: 10px;
+   margin-bottom: 25px;
+}
+
+.circle {
+   width:  60px;
+   height: 60px;
+   background: #A4A4A4;
+   /* border: 1px solid black; */
+   border-radius: 50%;
+}
+
+.circle>i {
+   font-weight: bolder;
+   font-size: 2.8em;
+   color: white;
+   position: relative;
+   top: 7px;
+   left: 7px;
+}
+
+#displayFooter {
+   margin-bottom: 17px;
 }
 
 #displayKeyLabel {
+   font-family: serif;
    font-size: 2em;
-   margin-left: 3px;
+   margin-left: 5px;
 }
 
 #displayKeyEntryList {
    display: flex;
-   height: 22vh;
+   max-height: 22vh;
    margin-top: 8px;
    flex-flow: column wrap;
+   justify-content: flex-end;
 }
 
 .displayKeyEntry {
