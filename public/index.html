@@ -11,7 +11,7 @@
    
    <body>
       <nav>
-         <div>
+         <div id="menuHolder">
             <i id="menu" class="material-icons">menu</i>
          </div>
          
@@ -21,9 +21,27 @@
          </div>
          
          <div>
+            <i id="filter" class="material-icons">filter_alt</i>
             <span id="help">?</span>
          </div>
       </nav>
+      
+      <div id="menuPage">
+         <i id="menu" class="material-icons">menu</i>
+         
+         <div id="menuList">
+            <div class="menuListItem">
+               <span>Schedule Listing</span>
+               <i class="material-icons">chevron_right</i>
+            </div>
+            <div class="menuListItem">
+               <span>Favorites</span>
+               <i class="material-icons">chevron_right</i>
+            </div>
+         </div>
+         
+         <button id="logOutButton" type="button" class="red-button">Log Out</button>
+      </div>
       
       <div id="displayPage">
          <div id="displayHeader">
@@ -166,8 +184,8 @@
          </div>
          
          <div id="filterFooter">
-            <button id="resetChangesButton" class="filter-button" type="button">Reset Changes</button>
-            <button id="saveChangesButton"  class="filter-button" type="button">Save  Changes</button>
+            <button id="resetChangesButton" class="red-button" type="button">Reset Changes</button>
+            <button id="saveChangesButton"  class="red-button" type="button">Save  Changes</button>
          </div>
       </div>
       

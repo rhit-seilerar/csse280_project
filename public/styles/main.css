@@ -5,7 +5,7 @@ body {
    grid-template-areas:
       "nav     nav"
       "display filter";
-   grid-template-columns: auto 33%;
+   grid-template-columns: auto 450px;
    grid-template-rows: 50px auto;
    height: 100vh;
 }
@@ -34,6 +34,15 @@ nav {
    top: 0px;
 }
 
+#filter {
+   display: none;
+   font-weight: bold;
+   font-size: 3em;
+   position: absolute;
+   right: 45px;
+   top: 1px;
+}
+
 #help {
    font-weight: bold;
    font-size: 3em;
@@ -54,6 +63,68 @@ nav {
    position: relative;
    right: 4px;
    top: 1px;
+}
+
+
+
+
+
+#menuPage {
+   background: #EEEEEE;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   position: absolute;
+   width: 400px;
+   height: 100%;
+   z-index: 600;
+   border-right: #800000 4px solid;
+}
+
+#menuPage>#menu {
+   color: #800000;
+   font-weight: bold;
+}
+
+#menuList {
+   width: 95%;
+   margin-left: 5%;
+   margin-top: 70px;
+   border-left: 4px #800000 solid;
+   border-top: 4px #800000 solid;
+}
+
+.menuListItem {
+   border-bottom: 4px #800000 solid;
+   height: 42px;
+   margin-right: 4px;
+   background: white;
+   text-align: right;
+}
+
+.menuListItem>span {
+   font-size: 1.5em;
+   font-weight: bold;
+   display: inline-block;
+   position: relative;
+   bottom: 47px;
+   left: 19px;
+}
+
+.menuListItem>i {
+   font-size: 4.8em;
+   color: #800000;
+   position: relative;
+   bottom: 16px;
+   left: 18px;
+}
+
+#logOutButton {
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 30px;
+   height: 40px;
+   width: 300px;
 }
 
 
@@ -111,7 +182,9 @@ nav {
 #displayArrows {
    display: flex;
    justify-content: space-between;
-   margin: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 15px;
    margin-bottom: 25px;
 }
 
@@ -209,13 +282,14 @@ nav {
    margin-bottom: 30px;
 }
 
-.filter-button {
+.red-button {
    background: #800000;
    color: white;
    border: 2px solid black;
    border-radius: 0;
    font-weight: bold;
    height: 80px;
+   width: 200px;
    font-size: 1.5em;
    padding-left: 10px;
    padding-right: 10px;
@@ -223,6 +297,34 @@ nav {
    margin-right: 6px;
 }
 
-.filter-button:active {
+.red-button:active {
    background: #802020;
+}
+
+@media (max-width: 1000px) {
+   body {
+      grid-template-areas:
+         "nav"
+         "display";
+      grid-template-columns: auto;
+      grid-template-rows: 50px auto;
+   }
+   
+   #filter {
+      display: inherit;
+   }
+   
+   #displayPage {
+      margin-right: 4%;
+   }
+   
+   #filterPage {
+      display: none;
+   }
+}
+
+@media (min-width: 1480px) {
+   #menuPage {
+      display: none;
+   }
 }
