@@ -1,0 +1,88 @@
+body {
+   margin: 0;
+   display: grid;
+   grid-template-areas:
+      "nav     nav"
+      "display filter";
+   grid-template-columns: auto 33%;
+   grid-template-rows: 50px auto;
+   height: 100vh;
+}
+
+nav {
+   background: #800000;
+   grid-area: nav;
+   color: white;
+   width: 100%;
+   height: 50px;
+   position: fixed;
+   justify-content: space-between;
+   display: flex;
+   top: 0;
+}
+
+#menu {
+   font-size: 3em;
+   position: absolute;
+   left: 5px;
+   top: 0px;
+}
+
+#help {
+   font-family: "roboto", sans-serif;
+   font-weight: bold;
+   font-size: 3em;
+   position: absolute;
+   right: 10px;
+   top: -4px;
+}
+
+#courseSelectorLabel {
+   font-size: 1.6em;
+   position: relative;
+   top: -15px;
+}
+
+#courseSelectorArrow {
+   font-size: 3em;
+   position: relative;
+   right: 4px;
+   top: 1px;
+}
+
+#displayPage {
+   grid-area: display;
+}
+
+
+
+
+
+#filterPage {
+   grid-area: filter;
+   font-family: "Roboto", sans-serif;
+   border-left: black 2px solid;
+}
+
+.filterSection {
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 2px solid black;
+}
+
+.filterSection>h1 {
+   text-align: center;
+   font-family: serif;
+}
+
+.filterSection>h2,.filterSection>h1 {
+   position: relative;
+   left: 10px;
+}
+
+.filter-arrow {
+   flex-basis: 4%;
+   color: black;
+   display: inline;
+   font-size: 4em;
+}
