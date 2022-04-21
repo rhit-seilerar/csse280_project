@@ -264,6 +264,7 @@ nav {
    flex-flow: column;
    justify-content: space-between;
    border-left: black 2px solid;
+   z-index: 400;
 }
 
 .filter-section {
