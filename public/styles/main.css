@@ -45,18 +45,19 @@ nav {
 }
 
 #filter {
-   display: none;
-   font-weight: bold;
-   font-size: 3em;
+   /* display: none; */
    position: absolute;
-   right: 45px;
-   top: 1px;
+   cursor: pointer;
+   right: 55px;
+   top: 2px;
 }
 
 #help {
    font-weight: bold;
    font-size: 3em;
    position: absolute;
+   cursor: pointer;
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
    right: 10px;
    top: -4px;
 }
@@ -99,15 +100,16 @@ nav {
    border-top: 4px #800000 solid;
 }
 
-.menuListItem {
+.menu-list-item {
    border-bottom: 4px #800000 solid;
    height: 42px;
    margin-right: 4px;
+   cursor: pointer;
    background: white;
    text-align: right;
 }
 
-.menuListItem>span {
+.menu-list-item>span {
    font-size: 1.5em;
    font-weight: bold;
    display: inline-block;
@@ -116,7 +118,7 @@ nav {
    left: 19px;
 }
 
-.menuListItem>i {
+.menu-list-item>i {
    font-size: 4.8em;
    color: #800000;
    position: relative;
@@ -198,18 +200,21 @@ nav {
 .circle {
    width:  60px;
    height: 60px;
-   background: #A4A4A4;
-   /* border: 1px solid black; */
+   background: #C4C4C4;
    border-radius: 50%;
+   cursor: pointer;
+   box-shadow: 0 2px;
 }
 
-.circle>i {
-   font-weight: bolder;
-   font-size: 2.8em;
-   color: white;
+.circle:active {
+   box-shadow: 0 0;
+   transform: translateY(2px);
+}
+
+.circle>img {
    position: relative;
-   top: 7px;
-   left: 7px;
+   top: 6px;
+   left: 6px;
 }
 
 #displayFooter {
@@ -230,11 +235,11 @@ nav {
    justify-content: flex-end;
 }
 
-.displayKeyEntry {
+.display-key-entry {
    margin: 5px;
 }
 
-.displayKeyColor {
+.display-key-color {
    display: inline-block;
    width:  30px;
    height: 30px;
@@ -242,7 +247,7 @@ nav {
    border: 1px solid black;
 }
 
-.displayKeyColor+span {
+.display-key-color+span {
    font-size: 1.5em;
    position: relative;
    left: 5px;
@@ -308,13 +313,12 @@ nav {
    background: #802020;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
    body {
       grid-template-areas:
          "nav"
          "display";
       grid-template-columns: auto;
-      grid-template-rows: 50px auto;
    }
    
    #filter {
@@ -328,4 +332,4 @@ nav {
    #filterPage {
       display: none;
    }
-}
+} */
