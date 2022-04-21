@@ -40,6 +40,7 @@ nav {
    position: fixed;
    left: 5px;
    top: 0px;
+   cursor: pointer;
    z-index: 700;
 }
 
@@ -68,8 +69,8 @@ nav {
 }
 
 #courseSelectorArrow {
-   font-size: 3em;
    position: relative;
+   cursor: pointer;
    right: 4px;
    top: 1px;
 }
@@ -153,7 +154,7 @@ nav {
 #favoriteStar {
    width:  40px;
    height: 40px;
-   color: black;
+   cursor: pointer;
    position: relative;
    top: 12px;
    right: 4px;
@@ -260,27 +261,27 @@ nav {
    border-left: black 2px solid;
 }
 
-.filterSection {
+.filter-section {
    display: flex;
    justify-content: space-between;
    border-bottom: 2px solid black;
 }
 
-.filterSection>h1 {
+.filter-section>h1 {
    text-align: center;
    font-family: serif;
 }
 
-.filterSection>h2,.filterSection>h1 {
+.filter-section>h2,.filter-section>h1 {
    position: relative;
    left: 10px;
 }
 
 .filter-arrow {
    flex-basis: 4%;
-   color: black;
+   margin-right: 10px;
+   cursor: pointer;
    display: inline;
-   font-size: 4em;
 }
 
 #filterFooter {

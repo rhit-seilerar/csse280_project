@@ -3,6 +3,15 @@ var rhit = rhit || {};
 rhit.Display = class {
    constructor() {
       this.favorited = false;
+      this.expandedFilters = [false,false,false,false,false];
+   }
+   
+   expandFilter(index) {
+      this.expandedFilters[index] = true;
+   }
+   
+   closeFilter(index) {
+      this.expandedFilters[index] = false;
    }
    
    setFavorited(newValue) {
@@ -38,8 +47,26 @@ rhit.init = function() {
          favoriteStar.src = "images/star_gold.svg";
       }
    }
+   
+   let filterSections = document.querySelectorAll(".filter-section");
+   for(let i = 1; i < filterSections.length; i++) {
+      let section = filterSections[i];
+      section.onclick = (event) => {
+         let arrow = section.children[1];
+         let expanded = rhit.display.expandedFilters[i];
+         if(expanded) {
+            rhit.display.closeFilter(i);
+            arrow.src = "images/expand_gray.svg";
+         } else {
+            rhit.display.expandFilter(i);
+            arrow.src = "images/expand_red.svg";
+         }
+      };
+   }
 };
 
+//TODO: Change course colors by clicking on the key, instead of going
+//      into filter options.
 
 rhit.main = function() {
    rhit.init();
