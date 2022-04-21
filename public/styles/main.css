@@ -45,8 +45,8 @@ nav {
 }
 
 #filter {
-   /* display: none; */
    position: absolute;
+   user-select: none;
    cursor: pointer;
    right: 55px;
    top: 2px;
@@ -56,10 +56,15 @@ nav {
    font-weight: bold;
    font-size: 3em;
    position: absolute;
+   user-select: none;
    cursor: pointer;
    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
    right: 10px;
    top: -4px;
+}
+
+#courseSelector {
+   cursor: pointer;
 }
 
 #courseSelectorLabel {
@@ -71,7 +76,7 @@ nav {
 
 #courseSelectorArrow {
    position: relative;
-   cursor: pointer;
+   user-select: none;
    right: 4px;
    top: 1px;
 }
@@ -203,6 +208,7 @@ nav {
    background: #C4C4C4;
    border-radius: 50%;
    cursor: pointer;
+   user-select: none;
    box-shadow: 0 2px;
 }
 
@@ -313,24 +319,3 @@ nav {
 .red-button:active {
    background: #802020;
 }
-
-/* @media (max-width: 1000px) {
-   body {
-      grid-template-areas:
-         "nav"
-         "display";
-      grid-template-columns: auto;
-   }
-   
-   #filter {
-      display: inherit;
-   }
-   
-   #displayPage {
-      margin-right: 4%;
-   }
-   
-   #filterPage {
-      display: none;
-   }
-} */
